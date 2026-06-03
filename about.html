@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
   <head>
-
+    <link rel="preload" as="image" href="https://images.pexels.com/photos/7859953/pexels-photo-7859953.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" fetchpriority="high">
     <!-- Microsoft Clarity -->
     <script type="text/javascript">
         (function(c,l,a,r,i,t,y){
@@ -10,6 +10,10 @@
             y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
         })(window, document, "clarity", "script", "x13mamdubq");
     </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -19,21 +23,12 @@
     <link rel="canonical" href="https://slableakdetectionowensboro.us/about">
     <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon" />
     <link rel="stylesheet" href="assets/global.css" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
   <body>
     
 <header style="position:sticky;top:0;z-index:50;background:#fff;color:var(--t6-ink);border-bottom:1px solid var(--t6-hairline);box-shadow:0 1px 0 rgba(23,34,7,0.04);">
 
-    <!-- Microsoft Clarity -->
-    <script type="text/javascript">
-        (function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-        })(window, document, "clarity", "script", "x13mamdubq");
-    </script>
-  <div class="t6-container" style="display:flex;align-items:center;justify-content:space-between;gap:1.5rem;padding-top:0.95rem;padding-bottom:0.95rem;">
+    <div class="t6-container" style="display:flex;align-items:center;justify-content:space-between;gap:1.5rem;padding-top:0.95rem;padding-bottom:0.95rem;">
     <a href="/" style="display:flex;align-items:center;gap:.65rem;text-decoration:none;color:var(--t6-ink);">
       <span style="width:38px;height:38px;display:inline-flex;align-items:center;justify-content:center;border-radius:10px;background:var(--t6-green);color:var(--t6-ink);">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
@@ -46,7 +41,7 @@
       <a href="about.html" class="t6-nav-link">About</a>
       <div class="t6-nav-dropdown">
         <a href="services.html" class="t6-nav-link" aria-haspopup="true">Services <svg class="t6-nav-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></a>
-        <div class="t6-nav-panel" role="menu">
+        <div class="t6-nav-panel">
           <div class="t6-nav-panel-grid">
         <a href="services/slab-leak-detection.html" class="t6-nav-panel-item">
           <span class="t6-nav-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg></span>
@@ -109,7 +104,7 @@
       </div>
       <div class="t6-nav-dropdown">
         <a href="locations.html" class="t6-nav-link" aria-haspopup="true">Locations <svg class="t6-nav-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></a>
-        <div class="t6-nav-panel" role="menu">
+        <div class="t6-nav-panel">
           <div class="t6-nav-panel-grid">
         <a href="locations/slab-leak-detection-in-philpot-ky.html" class="t6-nav-panel-item">
           <span class="t6-nav-panel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
@@ -450,7 +445,8 @@
             <input class="t6-input" type="tel" name="phone" placeholder="Phone number" required />
           </div>
           <input class="t6-input" type="email" name="email" placeholder="Email address" />
-          <select class="t6-select" name="service">
+          <label for="service-select" class="sr-only" style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;">Select Service</label>
+          <select id="service-select" class="t6-select" name="service">
             <option value="">What do you need help with?</option>
             <option>Emergency / same-day service</option>
             <option>Repair / diagnostic</option>
@@ -618,7 +614,7 @@
     Quote
   </a>
 </div>
-    <script src="https://unpkg.com/sal.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="https://unpkg.com/sal.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
   </body>
 </html>

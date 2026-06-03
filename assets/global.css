@@ -4,11 +4,9 @@
  * Pulled visual cues from Roplumb reference template.
  * ===================================================================== */
 
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap");
-
 :root {
   --t6-green: #A9DF59;
-  --t6-green-dark: #94CC42;
+  --t6-green-dark: #4b7716;
   --t6-green-soft: #EAF7D2;
   --t6-ink: #172207;
   --t6-text: #172207;

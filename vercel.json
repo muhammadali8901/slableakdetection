@@ -24,7 +24,12 @@
     },
     {
       "source": "/locations.html",
-      "destination": "/locations",
+      "destination": "/service-areas",
+      "permanent": true
+    },
+    {
+      "source": "/locations",
+      "destination": "/service-areas",
       "permanent": true
     },
     {

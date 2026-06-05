@@ -3,6 +3,7 @@
 @media (max-width: 1199px) {
   body header .t6-nav-desktop { display: none !important; }
   body header .t6-nav-toggle { display: inline-flex !important; }
+  body header > .t6-container a.t6-btn-primary { display: none !important; }
 }
 @media (min-width: 1200px) and (max-width: 1300px) {
   body header .t6-nav-desktop { gap: 1.1rem !important; }

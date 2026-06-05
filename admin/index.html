@@ -6,11 +6,10 @@
     <title>Admin Dashboard | Owensboro Leak Detection Experts</title>
     <meta name="robots" content="noindex, nofollow" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <link rel="shortcut icon" href="assets/images/favicon.jpg" type="image/jpeg" />
-    <link rel="stylesheet" href="assets/global.css" />
+    <link rel="shortcut icon" href="../assets/images/favicon.jpg" type="image/jpeg" />
+    <link rel="stylesheet" href="../assets/global.css" />
 
     <!-- Firebase Compat SDKs -->
     <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
@@ -325,7 +324,7 @@
     <!-- LOGIN VIEW -->
     <section id="login-section">
       <div class="login-card">
-        <img src="assets/images/logo-slableakdetection.jpg" alt="Owensboro Leak Detection Logo" class="login-logo" />
+        <img src="../assets/images/logo-slableakdetection.jpg" alt="Owensboro Leak Detection Logo" class="login-logo" />
         <h1 class="login-title">Admin Console</h1>
         <p class="login-subtitle">Sign in to manage form submissions</p>
         
@@ -352,8 +351,8 @@
       <header class="admin-header">
         <div class="t6-container header-content">
           <div class="admin-title-group">
-            <a href="/" style="display: flex; align-items: center; gap: 0.65rem;">
-              <img src="assets/images/logo-slableakdetection.jpg" alt="Logo" style="height: 32px; width: auto; border-radius: 4px;" />
+            <a href="../" style="display: flex; align-items: center; gap: 0.65rem;">
+              <img src="../assets/images/logo-slableakdetection.jpg" alt="Logo" style="height: 32px; width: auto; border-radius: 4px;" />
             </a>
             <span style="font-family: var(--font-display); font-weight: 700; font-size: 1.15rem; color: var(--t6-ink);">
               Owensboro Leak Detection
@@ -614,7 +613,7 @@
             <td><a href="mailto:${escapeHtml(d.email || "")}">${escapeHtml(d.email || "-")}</a></td>
             <td><span class="badge">${escapeHtml(d.service || "-")}</span></td>
             <td><div class="msg-cell" title="${escapeHtml(d.message || "")}">${escapeHtml(d.message || "-")}</div></td>
-            <td><small>${escapeHtml(d.sourceUrl || "-")}</small></td>
+            <td><span class="badge" style="background:#eaf7d2;color:var(--t6-green-dark);">${escapeHtml(d.sourceUrl || "-")}</span></td>
             <td><small>${date}</small></td>
             <td><button class="delete-btn" onclick="deleteDoc('leads', '${doc.id}')">Delete</button></td>
           `;

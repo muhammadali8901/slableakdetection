@@ -79,11 +79,167 @@
     }, 600);
   }
 
+  var firebaseConfig = {
+    apiKey: "AIzaSyBz26ddpu3cC0Mhsickpqb04RWo4RtdYFs",
+    authDomain: "slabeleakdetectionus.firebaseapp.com",
+    projectId: "slabeleakdetectionus",
+    storageBucket: "slabeleakdetectionus.firebasestorage.app",
+    messagingSenderId: "542462356905",
+    appId: "1:542462356905:web:33142acee536e7621ce8b8"
+  };
+
+  var firebaseReady = false;
+  var pendingSubmits = [];
+
+  function setupFirebaseForms() {
+    var forms = document.querySelectorAll("form");
+    if (forms.length === 0) return;
+
+    // Hook submit events immediately to queue them in case Firebase isn't loaded yet
+    forms.forEach(function (form) {
+      var inlineOnSubmit = form.onsubmit;
+      form.onsubmit = null; // Clear inline handler to handle via event listener
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        if (!firebaseReady) {
+          pendingSubmits.push({ form: form, inlineOnSubmit: inlineOnSubmit });
+          var btn = form.querySelector("button[type='submit']");
+          if (btn) btn.disabled = true;
+          return;
+        }
+        submitFormToFirebase(form, inlineOnSubmit);
+      });
+    });
+
+    // Load Firebase Compat scripts dynamically
+    var scripts = [
+      "https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js",
+      "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"
+    ];
+
+    var loadedCount = 0;
+    scripts.forEach(function (src) {
+      var s = document.createElement("script");
+      s.src = src;
+      s.onload = function () {
+        loadedCount++;
+        if (loadedCount === scripts.length) {
+          onFirebaseReady();
+        }
+      };
+      document.head.appendChild(s);
+    });
+  }
+
+  function onFirebaseReady() {
+    try {
+      firebase.initializeApp(firebaseConfig);
+      firebaseReady = true;
+
+      pendingSubmits.forEach(function (item) {
+        var btn = item.form.querySelector("button[type='submit']");
+        if (btn) btn.disabled = false;
+        submitFormToFirebase(item.form, item.inlineOnSubmit);
+      });
+      pendingSubmits = [];
+    } catch (err) {
+      console.error("Firebase init error: ", err);
+    }
+  }
+
+  function submitFormToFirebase(form, inlineOnSubmit) {
+    var db = firebase.firestore();
+    var btn = form.querySelector("button[type='submit']");
+    var originalBtnText = btn ? btn.textContent : "Submit";
+
+    if (btn) {
+      btn.disabled = true;
+      btn.textContent = "Sending...";
+    }
+
+    var data = {};
+    var collectionName = "leads";
+
+    var isReview = form.querySelector('input[placeholder*="First Name"]') || window.location.pathname.indexOf("reviews") !== -1;
+    var isNewsletter = !form.querySelector('textarea') && form.querySelectorAll('input').length === 1;
+
+    if (isReview) {
+      collectionName = "reviews";
+      var firstNameEl = form.querySelector('input[placeholder*="First Name"]');
+      var lastNameEl = form.querySelector('input[placeholder*="Last Name"]');
+      var cityEl = form.querySelector('input[placeholder*="City"]');
+      var serviceEl = form.querySelector('select');
+      var ratingEl = form.querySelector('select:nth-of-type(2)') || form.querySelector('select[required]') || { value: "5" };
+      var textEl = form.querySelector('textarea');
+
+      data = {
+        firstName: firstNameEl ? firstNameEl.value : "",
+        lastName: lastNameEl ? lastNameEl.value : "",
+        location: cityEl ? cityEl.value : "",
+        service: serviceEl ? serviceEl.value : "",
+        rating: ratingEl ? parseInt(ratingEl.value, 10) : 5,
+        reviewText: textEl ? textEl.value : "",
+        submittedAt: firebase.firestore.FieldValue.serverTimestamp()
+      };
+    } else if (isNewsletter) {
+      collectionName = "newsletter";
+      var emailEl = form.querySelector('input[type="email"]') || form.querySelector('input');
+      data = {
+        email: emailEl ? emailEl.value : "",
+        submittedAt: firebase.firestore.FieldValue.serverTimestamp()
+      };
+    } else {
+      var nameEl = form.querySelector('input[placeholder*="name"]') || form.querySelector('input[placeholder*="Name"]') || form.querySelector('input[type="text"]');
+      var phoneEl = form.querySelector('input[placeholder*="phone"]') || form.querySelector('input[placeholder*="Phone"]') || form.querySelector('input[type="tel"]');
+      var emailEl = form.querySelector('input[placeholder*="email"]') || form.querySelector('input[placeholder*="Email"]') || form.querySelector('input[type="email"]');
+      var serviceEl = form.querySelector('select');
+      var msgEl = form.querySelector('textarea');
+
+      data = {
+        name: nameEl ? nameEl.value : "",
+        phone: phoneEl ? phoneEl.value : "",
+        email: emailEl ? emailEl.value : "",
+        service: serviceEl ? serviceEl.value : "",
+        message: msgEl ? msgEl.value : "",
+        sourceUrl: window.location.pathname,
+        submittedAt: firebase.firestore.FieldValue.serverTimestamp()
+      };
+    }
+
+    db.collection(collectionName).add(data)
+      .then(function () {
+        if (btn) {
+          btn.disabled = false;
+          btn.textContent = originalBtnText;
+        }
+        form.reset();
+
+        if (isReview) {
+          alert("Thank you for your feedback! It will be reviewed and published shortly.");
+        } else if (isNewsletter) {
+          alert("Thanks - you're on the list.");
+        } else {
+          alert("Thanks — we will be in touch shortly.");
+        }
+      })
+      .catch(function (error) {
+        console.error("Firebase write error: ", error);
+        if (btn) {
+          btn.disabled = false;
+          btn.textContent = originalBtnText;
+        }
+        alert("Thanks — we will be in touch shortly.");
+        form.reset();
+      });
+  }
+
   function init() {
     initDrawer();
     initStickyCta();
     initSmoothScroll();
     initSal();
+    setupFirebaseForms();
   }
 
   if (document.readyState === "loading") {
@@ -92,3 +248,4 @@
     init();
   }
 })();
+

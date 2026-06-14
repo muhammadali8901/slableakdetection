@@ -39,7 +39,6 @@
     bar.style.transition = "transform .25s ease";
     window.addEventListener("scroll", function () {
       var y = window.scrollY;
-      // Hide when at the very top of the page (no need to interrupt hero).
       if (y < 120) {
         bar.style.transform = "translateY(100%)";
       } else {
@@ -62,21 +61,27 @@
     });
   }
 
-  // ------- sal.js init + safety net -------
+  // ------- sal.js init + safety net (Deferred until window load) -------
   function initSal() {
-    if (typeof sal === "function") {
-      try {
-        sal({ once: true, threshold: 0.12 });
-      } catch { /* noop */ }
+    var runSal = function () {
+      if (typeof sal === "function") {
+        try {
+          sal({ once: true, threshold: 0.12 });
+        } catch { /* noop */ }
+      }
+      setTimeout(function () {
+        document.querySelectorAll("[data-sal]:not(.sal-animate)").forEach(function (el) {
+          el.style.opacity = "1";
+          el.style.transform = "none";
+        });
+      }, 300);
+    };
+
+    if (document.readyState === "complete") {
+      runSal();
+    } else {
+      window.addEventListener("load", runSal);
     }
-    // Safety: force-reveal anything still hidden 600 ms after init in case
-    // sal.js fails to load or activate elements already in the viewport.
-    setTimeout(function () {
-      document.querySelectorAll("[data-sal]:not(.sal-animate)").forEach(function (el) {
-        el.style.opacity = "1";
-        el.style.transform = "none";
-      });
-    }, 600);
   }
 
   var firebaseConfig = {
@@ -88,68 +93,19 @@
     appId: "1:542462356905:web:33142acee536e7621ce8b8"
   };
 
-  var firebaseReady = false;
-  var pendingSubmits = [];
-
   function setupFirebaseForms() {
     var forms = document.querySelectorAll("form");
     if (forms.length === 0) return;
 
-    // Hook submit events immediately to queue them in case Firebase isn't loaded yet
     forms.forEach(function (form) {
-      var inlineOnSubmit = form.onsubmit;
-      form.onsubmit = null; // Clear inline handler to handle via event listener
-
       form.addEventListener("submit", function (e) {
         e.preventDefault();
-        if (!firebaseReady) {
-          pendingSubmits.push({ form: form, inlineOnSubmit: inlineOnSubmit });
-          var btn = form.querySelector("button[type='submit']");
-          if (btn) btn.disabled = true;
-          return;
-        }
-        submitFormToFirebase(form, inlineOnSubmit);
+        submitFormToFirebase(form);
       });
-    });
-
-    // Load Firebase Compat scripts dynamically
-    var scripts = [
-      "https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js",
-      "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"
-    ];
-
-    var loadedCount = 0;
-    scripts.forEach(function (src) {
-      var s = document.createElement("script");
-      s.src = src;
-      s.onload = function () {
-        loadedCount++;
-        if (loadedCount === scripts.length) {
-          onFirebaseReady();
-        }
-      };
-      document.head.appendChild(s);
     });
   }
 
-  function onFirebaseReady() {
-    try {
-      firebase.initializeApp(firebaseConfig);
-      firebaseReady = true;
-
-      pendingSubmits.forEach(function (item) {
-        var btn = item.form.querySelector("button[type='submit']");
-        if (btn) btn.disabled = false;
-        submitFormToFirebase(item.form, item.inlineOnSubmit);
-      });
-      pendingSubmits = [];
-    } catch (err) {
-      console.error("Firebase init error: ", err);
-    }
-  }
-
-  function submitFormToFirebase(form, inlineOnSubmit) {
-    var db = firebase.firestore();
+  async function submitFormToFirebase(form) {
     var btn = form.querySelector("button[type='submit']");
     var originalBtnText = btn ? btn.textContent : "Submit";
 
@@ -179,15 +135,13 @@
         location: cityEl ? cityEl.value : "",
         service: serviceEl ? serviceEl.value : "",
         rating: ratingEl ? parseInt(ratingEl.value, 10) : 5,
-        reviewText: textEl ? textEl.value : "",
-        submittedAt: firebase.firestore.FieldValue.serverTimestamp()
+        reviewText: textEl ? textEl.value : ""
       };
     } else if (isNewsletter) {
       collectionName = "newsletter";
       var emailEl = form.querySelector('input[type="email"]') || form.querySelector('input');
       data = {
-        email: emailEl ? emailEl.value : "",
-        submittedAt: firebase.firestore.FieldValue.serverTimestamp()
+        email: emailEl ? emailEl.value : ""
       };
     } else {
       var nameEl = form.querySelector('input[placeholder*="name"]') || form.querySelector('input[placeholder*="Name"]') || form.querySelector('input[type="text"]');
@@ -202,36 +156,45 @@
         email: emailEl ? emailEl.value : "",
         service: serviceEl ? serviceEl.value : "",
         message: msgEl ? msgEl.value : "",
-        sourceUrl: window.location.pathname,
-        submittedAt: firebase.firestore.FieldValue.serverTimestamp()
+        sourceUrl: window.location.pathname
       };
     }
 
-    db.collection(collectionName).add(data)
-      .then(function () {
-        if (btn) {
-          btn.disabled = false;
-          btn.textContent = originalBtnText;
-        }
-        form.reset();
+    try {
+      // Dynamically import lightweight modular SDKs on submission
+      const { initializeApp } = await import("https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js");
+      const { getFirestore, collection, addDoc, serverTimestamp } = await import("https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-lite.js");
 
-        if (isReview) {
-          alert("Thank you for your feedback! It will be reviewed and published shortly.");
-        } else if (isNewsletter) {
-          alert("Thanks - you're on the list.");
-        } else {
-          alert("Thanks — we will be in touch shortly.");
-        }
-      })
-      .catch(function (error) {
-        console.error("Firebase write error: ", error);
-        if (btn) {
-          btn.disabled = false;
-          btn.textContent = originalBtnText;
-        }
-        alert("Thanks — we will be in touch shortly.");
-        form.reset();
-      });
+      const app = initializeApp(firebaseConfig);
+      const db = getFirestore(app);
+
+      // Append server timestamp
+      data.submittedAt = serverTimestamp();
+
+      await addDoc(collection(db, collectionName), data);
+
+      if (btn) {
+        btn.disabled = false;
+        btn.textContent = originalBtnText;
+      }
+      form.reset();
+
+      if (isReview) {
+        alert("Thank you for your feedback! It will be reviewed and published shortly.");
+      } else if (isNewsletter) {
+        alert("Thanks - you're on the list.");
+      } else {
+        alert("Thanks - we will be in touch shortly.");
+      }
+    } catch (error) {
+      console.error("Firebase write error: ", error);
+      if (btn) {
+        btn.disabled = false;
+        btn.textContent = originalBtnText;
+      }
+      alert("Thanks - we will be in touch shortly.");
+      form.reset();
+    }
   }
 
   function init() {
@@ -248,4 +211,3 @@
     init();
   }
 })();
-

@@ -1,3 +1,4 @@
+# Static pages clean URLs
 /index.html / 301!
 /about.html /about 301!
 /contact.html /contact 301!
@@ -6,3 +7,74 @@
 /locations /service-areas 301!
 /privacy-policy.html /privacy-policy 301!
 /blog.html /blog 301!
+
+# Location subpages 301 redirects
+/locations/slab-leak-detection-in-beaver-dam-ky.html /service-areas 301!
+/locations/slab-leak-detection-in-beaver-dam-ky /service-areas 301!
+/locations/slab-leak-detection-in-calhoun-ky.html /service-areas 301!
+/locations/slab-leak-detection-in-calhoun-ky /service-areas 301!
+/locations/slab-leak-detection-in-hartford-ky.html /service-areas 301!
+/locations/slab-leak-detection-in-hartford-ky /service-areas 301!
+/locations/slab-leak-detection-in-henderson-ky.html /service-areas 301!
+/locations/slab-leak-detection-in-henderson-ky /service-areas 301!
+/locations/slab-leak-detection-in-lewisport-ky.html /service-areas 301!
+/locations/slab-leak-detection-in-lewisport-ky /service-areas 301!
+/locations/slab-leak-detection-in-livermore-ky.html /service-areas 301!
+/locations/slab-leak-detection-in-livermore-ky /service-areas 301!
+/locations/slab-leak-detection-in-maceo-ky.html /service-areas 301!
+/locations/slab-leak-detection-in-maceo-ky /service-areas 301!
+/locations/slab-leak-detection-in-masonville-ky.html /service-areas 301!
+/locations/slab-leak-detection-in-masonville-ky /service-areas 301!
+/locations/slab-leak-detection-in-philpot-ky.html /service-areas 301!
+/locations/slab-leak-detection-in-philpot-ky /service-areas 301!
+/locations/slab-leak-detection-in-sorgho-ky.html /service-areas 301!
+/locations/slab-leak-detection-in-sorgho-ky /service-areas 301!
+/locations/slab-leak-detection-in-thruston-ky.html /service-areas 301!
+/locations/slab-leak-detection-in-thruston-ky /service-areas 301!
+/locations/slab-leak-detection-in-utica-ky.html /service-areas 301!
+/locations/slab-leak-detection-in-utica-ky /service-areas 301!
+/locations/slab-leak-detection-in-whitesville-ky.html /service-areas 301!
+/locations/slab-leak-detection-in-whitesville-ky /service-areas 301!
+
+# Service subpages 301 redirects
+/services/electronic-leak-detection.html /services/slab-leak-detection 301!
+/services/electronic-leak-detection /services/slab-leak-detection 301!
+/services/infrared-leak-detection.html /services/slab-leak-detection 301!
+/services/infrared-leak-detection /services/slab-leak-detection 301!
+/services/acoustic-leak-detection.html /services/slab-leak-detection 301!
+/services/acoustic-leak-detection /services/slab-leak-detection 301!
+/services/underground-pipe-leak-detection.html /services/slab-leak-detection 301!
+/services/underground-pipe-leak-detection /services/slab-leak-detection 301!
+/services/cold-water-line-leak-detection.html /services/slab-leak-detection 301!
+/services/cold-water-line-leak-detection /services/slab-leak-detection 301!
+/services/hot-water-line-leak-detection.html /services/slab-leak-detection 301!
+/services/hot-water-line-leak-detection /services/slab-leak-detection 301!
+/services/water-line-leak-detection.html /services/slab-leak-detection 301!
+/services/water-line-leak-detection /services/slab-leak-detection 301!
+/services/water-meter-leak-testing.html /services/slab-leak-detection 301!
+/services/water-meter-leak-testing /services/slab-leak-detection 301!
+/services/emergency-slab-leak-detection.html /services/slab-leak-detection 301!
+/services/emergency-slab-leak-detection /services/slab-leak-detection 301!
+/services/water-leak-detection.html /services/slab-leak-detection 301!
+/services/water-leak-detection /services/slab-leak-detection 301!
+/services/emergency-leak-repair.html /services/slab-leak-repair 301!
+/services/emergency-leak-repair /services/slab-leak-repair 301!
+/services/foundation-leak-repair.html /services/slab-leak-repair 301!
+/services/foundation-leak-repair /services/slab-leak-repair 301!
+/services/underground-pipe-repair.html /services/slab-leak-repair 301!
+/services/underground-pipe-repair /services/slab-leak-repair 301!
+/services/burst-pipe-repair.html /services/slab-leak-repair 301!
+/services/burst-pipe-repair /services/slab-leak-repair 301!
+/services/pipe-rerouting.html /services/slab-leak-repair 301!
+/services/pipe-rerouting /services/slab-leak-repair 301!
+/services/foundation-water-damage.html /services/slab-leak-repair 301!
+/services/foundation-water-damage /services/slab-leak-repair 301!
+/services/hidden-water-leaks.html /services/slab-leak-repair 301!
+/services/hidden-water-leaks /services/slab-leak-repair 301!
+/services/slab-foundation-problems.html /services/slab-leak-repair 301!
+/services/slab-foundation-problems /services/slab-leak-repair 301!
+/services/water-leak-repair.html /services/water-line-repair 301!
+/services/water-leak-repair /services/water-line-repair 301!
+
+# Wildcards catch-all
+/locations/* /service-areas 301!

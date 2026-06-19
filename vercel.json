@@ -41,6 +41,331 @@
       "source": "/blog.html",
       "destination": "/blog",
       "permanent": true
+    },
+    {
+      "source": "/locations/slab-leak-detection-in-beaver-dam-ky.html",
+      "destination": "/service-areas",
+      "permanent": true
+    },
+    {
+      "source": "/locations/slab-leak-detection-in-beaver-dam-ky",
+      "destination": "/service-areas",
+      "permanent": true
+    },
+    {
+      "source": "/locations/slab-leak-detection-in-calhoun-ky.html",
+      "destination": "/service-areas",
+      "permanent": true
+    },
+    {
+      "source": "/locations/slab-leak-detection-in-calhoun-ky",
+      "destination": "/service-areas",
+      "permanent": true
+    },
+    {
+      "source": "/locations/slab-leak-detection-in-hartford-ky.html",
+      "destination": "/service-areas",
+      "permanent": true
+    },
+    {
+      "source": "/locations/slab-leak-detection-in-hartford-ky",
+      "destination": "/service-areas",
+      "permanent": true
+    },
+    {
+      "source": "/locations/slab-leak-detection-in-henderson-ky.html",
+      "destination": "/service-areas",
+      "permanent": true
+    },
+    {
+      "source": "/locations/slab-leak-detection-in-henderson-ky",
+      "destination": "/service-areas",
+      "permanent": true
+    },
+    {
+      "source": "/locations/slab-leak-detection-in-lewisport-ky.html",
+      "destination": "/service-areas",
+      "permanent": true
+    },
+    {
+      "source": "/locations/slab-leak-detection-in-lewisport-ky",
+      "destination": "/service-areas",
+      "permanent": true
+    },
+    {
+      "source": "/locations/slab-leak-detection-in-livermore-ky.html",
+      "destination": "/service-areas",
+      "permanent": true
+    },
+    {
+      "source": "/locations/slab-leak-detection-in-livermore-ky",
+      "destination": "/service-areas",
+      "permanent": true
+    },
+    {
+      "source": "/locations/slab-leak-detection-in-maceo-ky.html",
+      "destination": "/service-areas",
+      "permanent": true
+    },
+    {
+      "source": "/locations/slab-leak-detection-in-maceo-ky",
+      "destination": "/service-areas",
+      "permanent": true
+    },
+    {
+      "source": "/locations/slab-leak-detection-in-masonville-ky.html",
+      "destination": "/service-areas",
+      "permanent": true
+    },
+    {
+      "source": "/locations/slab-leak-detection-in-masonville-ky",
+      "destination": "/service-areas",
+      "permanent": true
+    },
+    {
+      "source": "/locations/slab-leak-detection-in-philpot-ky.html",
+      "destination": "/service-areas",
+      "permanent": true
+    },
+    {
+      "source": "/locations/slab-leak-detection-in-philpot-ky",
+      "destination": "/service-areas",
+      "permanent": true
+    },
+    {
+      "source": "/locations/slab-leak-detection-in-sorgho-ky.html",
+      "destination": "/service-areas",
+      "permanent": true
+    },
+    {
+      "source": "/locations/slab-leak-detection-in-sorgho-ky",
+      "destination": "/service-areas",
+      "permanent": true
+    },
+    {
+      "source": "/locations/slab-leak-detection-in-thruston-ky.html",
+      "destination": "/service-areas",
+      "permanent": true
+    },
+    {
+      "source": "/locations/slab-leak-detection-in-thruston-ky",
+      "destination": "/service-areas",
+      "permanent": true
+    },
+    {
+      "source": "/locations/slab-leak-detection-in-utica-ky.html",
+      "destination": "/service-areas",
+      "permanent": true
+    },
+    {
+      "source": "/locations/slab-leak-detection-in-utica-ky",
+      "destination": "/service-areas",
+      "permanent": true
+    },
+    {
+      "source": "/locations/slab-leak-detection-in-whitesville-ky.html",
+      "destination": "/service-areas",
+      "permanent": true
+    },
+    {
+      "source": "/locations/slab-leak-detection-in-whitesville-ky",
+      "destination": "/service-areas",
+      "permanent": true
+    },
+    {
+      "source": "/services/electronic-leak-detection.html",
+      "destination": "/services/slab-leak-detection",
+      "permanent": true
+    },
+    {
+      "source": "/services/electronic-leak-detection",
+      "destination": "/services/slab-leak-detection",
+      "permanent": true
+    },
+    {
+      "source": "/services/infrared-leak-detection.html",
+      "destination": "/services/slab-leak-detection",
+      "permanent": true
+    },
+    {
+      "source": "/services/infrared-leak-detection",
+      "destination": "/services/slab-leak-detection",
+      "permanent": true
+    },
+    {
+      "source": "/services/acoustic-leak-detection.html",
+      "destination": "/services/slab-leak-detection",
+      "permanent": true
+    },
+    {
+      "source": "/services/acoustic-leak-detection",
+      "destination": "/services/slab-leak-detection",
+      "permanent": true
+    },
+    {
+      "source": "/services/underground-pipe-leak-detection.html",
+      "destination": "/services/slab-leak-detection",
+      "permanent": true
+    },
+    {
+      "source": "/services/underground-pipe-leak-detection",
+      "destination": "/services/slab-leak-detection",
+      "permanent": true
+    },
+    {
+      "source": "/services/cold-water-line-leak-detection.html",
+      "destination": "/services/slab-leak-detection",
+      "permanent": true
+    },
+    {
+      "source": "/services/cold-water-line-leak-detection",
+      "destination": "/services/slab-leak-detection",
+      "permanent": true
+    },
+    {
+      "source": "/services/hot-water-line-leak-detection.html",
+      "destination": "/services/slab-leak-detection",
+      "permanent": true
+    },
+    {
+      "source": "/services/hot-water-line-leak-detection",
+      "destination": "/services/slab-leak-detection",
+      "permanent": true
+    },
+    {
+      "source": "/services/water-line-leak-detection.html",
+      "destination": "/services/slab-leak-detection",
+      "permanent": true
+    },
+    {
+      "source": "/services/water-line-leak-detection",
+      "destination": "/services/slab-leak-detection",
+      "permanent": true
+    },
+    {
+      "source": "/services/water-meter-leak-testing.html",
+      "destination": "/services/slab-leak-detection",
+      "permanent": true
+    },
+    {
+      "source": "/services/water-meter-leak-testing",
+      "destination": "/services/slab-leak-detection",
+      "permanent": true
+    },
+    {
+      "source": "/services/emergency-slab-leak-detection.html",
+      "destination": "/services/slab-leak-detection",
+      "permanent": true
+    },
+    {
+      "source": "/services/emergency-slab-leak-detection",
+      "destination": "/services/slab-leak-detection",
+      "permanent": true
+    },
+    {
+      "source": "/services/water-leak-detection.html",
+      "destination": "/services/slab-leak-detection",
+      "permanent": true
+    },
+    {
+      "source": "/services/water-leak-detection",
+      "destination": "/services/slab-leak-detection",
+      "permanent": true
+    },
+    {
+      "source": "/services/emergency-leak-repair.html",
+      "destination": "/services/slab-leak-repair",
+      "permanent": true
+    },
+    {
+      "source": "/services/emergency-leak-repair",
+      "destination": "/services/slab-leak-repair",
+      "permanent": true
+    },
+    {
+      "source": "/services/foundation-leak-repair.html",
+      "destination": "/services/slab-leak-repair",
+      "permanent": true
+    },
+    {
+      "source": "/services/foundation-leak-repair",
+      "destination": "/services/slab-leak-repair",
+      "permanent": true
+    },
+    {
+      "source": "/services/underground-pipe-repair.html",
+      "destination": "/services/slab-leak-repair",
+      "permanent": true
+    },
+    {
+      "source": "/services/underground-pipe-repair",
+      "destination": "/services/slab-leak-repair",
+      "permanent": true
+    },
+    {
+      "source": "/services/burst-pipe-repair.html",
+      "destination": "/services/slab-leak-repair",
+      "permanent": true
+    },
+    {
+      "source": "/services/burst-pipe-repair",
+      "destination": "/services/slab-leak-repair",
+      "permanent": true
+    },
+    {
+      "source": "/services/pipe-rerouting.html",
+      "destination": "/services/slab-leak-repair",
+      "permanent": true
+    },
+    {
+      "source": "/services/pipe-rerouting",
+      "destination": "/services/slab-leak-repair",
+      "permanent": true
+    },
+    {
+      "source": "/services/foundation-water-damage.html",
+      "destination": "/services/slab-leak-repair",
+      "permanent": true
+    },
+    {
+      "source": "/services/foundation-water-damage",
+      "destination": "/services/slab-leak-repair",
+      "permanent": true
+    },
+    {
+      "source": "/services/hidden-water-leaks.html",
+      "destination": "/services/slab-leak-repair",
+      "permanent": true
+    },
+    {
+      "source": "/services/hidden-water-leaks",
+      "destination": "/services/slab-leak-repair",
+      "permanent": true
+    },
+    {
+      "source": "/services/slab-foundation-problems.html",
+      "destination": "/services/slab-leak-repair",
+      "permanent": true
+    },
+    {
+      "source": "/services/slab-foundation-problems",
+      "destination": "/services/slab-leak-repair",
+      "permanent": true
+    },
+    {
+      "source": "/services/water-leak-repair.html",
+      "destination": "/services/water-line-repair",
+      "permanent": true
+    },
+    {
+      "source": "/services/water-leak-repair",
+      "destination": "/services/water-line-repair",
+      "permanent": true
+    },
+    {
+      "source": "/locations/:path*",
+      "destination": "/service-areas",
+      "permanent": true
     }
   ]
 }

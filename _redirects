@@ -6,7 +6,7 @@
 /locations.html /service-areas 301!
 /locations /service-areas 301!
 /privacy-policy.html /privacy-policy 301!
-/blog.html /blog 301!
+/blog.html /case-studies 301!
 
 # Location subpages 301 redirects
 /locations/slab-leak-detection-in-beaver-dam-ky.html /service-areas 301!
@@ -77,4 +77,11 @@
 /services/water-leak-repair /services/water-line-repair 301!
 
 # Wildcards catch-all
+
+# Redirects for deleted reviews, testimonials, and blog
+/blog /case-studies 301!
+/reviews.html / 301!
+/reviews / 301!
+/testimonials.html / 301!
+/testimonials / 301!
 /locations/* /service-areas 301!

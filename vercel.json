@@ -39,7 +39,7 @@
     },
     {
       "source": "/blog.html",
-      "destination": "/blog",
+      "destination": "/case-studies",
       "permanent": true
     },
     {
@@ -365,6 +365,31 @@
     {
       "source": "/locations/:path*",
       "destination": "/service-areas",
+      "permanent": true
+    },
+    {
+      "source": "/blog",
+      "destination": "/case-studies",
+      "permanent": true
+    },
+    {
+      "source": "/reviews.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/reviews",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/testimonials.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/testimonials",
+      "destination": "/",
       "permanent": true
     }
   ]

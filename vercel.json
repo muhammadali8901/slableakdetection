@@ -363,11 +363,6 @@
       "permanent": true
     },
     {
-      "source": "/locations/:path*",
-      "destination": "/service-areas",
-      "permanent": true
-    },
-    {
       "source": "/blog",
       "destination": "/case-studies",
       "permanent": true

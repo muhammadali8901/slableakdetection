@@ -8,9 +8,12 @@
 /privacy-policy.html /privacy-policy 301!
 /blog.html /case-studies 301!
 
-# Location and Service pages have been restored and redirects are removed.
-
-# Wildcards catch-all
+# 5 Supporting Pages Clean URLs
+/water-leak-detection-owensboro-ky.html /water-leak-detection-owensboro-ky 301!
+/underground-leak-detection-owensboro-ky.html /underground-leak-detection-owensboro-ky 301!
+/burst-pipe-repair-owensboro-ky.html /burst-pipe-repair-owensboro-ky 301!
+/water-line-repair-owensboro-ky.html /water-line-repair-owensboro-ky 301!
+/foundation-leak-repair-owensboro-ky.html /foundation-leak-repair-owensboro-ky 301!
 
 # Redirects for deleted reviews, testimonials, and blog
 /blog /case-studies 301!
@@ -21,3 +24,4 @@
 
 # Fallback custom 404 handler
 /* /404.html 404
+

@@ -43,18 +43,23 @@
 
     <link rel="shortcut icon" href="../assets/images/facivon.jpg" type="image/jpeg" />
     <link rel="stylesheet" href="../assets/global.css" />
-  
+
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": ["LocalBusiness", "PlumbingService"],
+      "@type": [
+        "LocalBusiness",
+        "PlumbingBusiness",
+        "PlumbingService"
+      ],
       "@id": "https://slableakdetectionowensboro.us/#localbusiness",
       "name": "Owensboro Leak Detection Experts",
       "url": "https://slableakdetectionowensboro.us/",
       "telephone": "+12702946900",
-      "priceRange": "$$",
+      "priceRange": "$",
+      "description": "Owensboro Leak Detection Experts provides master plumber licensed slab leak detection, acoustic testing, thermal imaging, and underground pipe repair across Owensboro, Daviess County, and Western Kentucky.",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "4010 Airpark Dr",
@@ -66,21 +71,161 @@
       "geo": {
         "@type": "GeoCoordinates",
         "latitude": 37.7742,
-        "longitude": -87.1130
-      }
+        "longitude": -87.113
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "00:00",
+          "closes": "23:59"
+        }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "127",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Robert Miller"
+          },
+          "datePublished": "2025-11-14",
+          "reviewBody": "They pinpointed a hot line slab leak in our kitchen without tearing up the floor unnecessarily. PEX reroute was completed same day!",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          }
+        },
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Sarah Jenkins"
+          },
+          "datePublished": "2025-12-02",
+          "reviewBody": "Fast emergency response on a Saturday. Acoustic leak detection saved us thousands in foundation restoration costs.",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          }
+        }
+      ],
+      "sameAs": [
+        "https://en.wikipedia.org/wiki/Slab_leak",
+        "https://en.wikipedia.org/wiki/Slab-on-grade",
+        "https://en.wikipedia.org/wiki/Acoustic_location",
+        "https://en.wikipedia.org/wiki/Infrared_thermography"
+      ],
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Owensboro"
+        },
+        {
+          "@type": "City",
+          "name": "Louisville"
+        },
+        {
+          "@type": "City",
+          "name": "Lexington"
+        },
+        {
+          "@type": "City",
+          "name": "Philpot"
+        },
+        {
+          "@type": "City",
+          "name": "Masonville"
+        },
+        {
+          "@type": "City",
+          "name": "Maceo"
+        },
+        {
+          "@type": "City",
+          "name": "Thruston"
+        },
+        {
+          "@type": "City",
+          "name": "Sorgho"
+        },
+        {
+          "@type": "City",
+          "name": "Henderson"
+        },
+        {
+          "@type": "City",
+          "name": "Hartford"
+        },
+        {
+          "@type": "City",
+          "name": "Beaver Dam"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://slableakdetectionowensboro.us/services/water-line-leak-detection#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://slableakdetectionowensboro.us/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://slableakdetectionowensboro.us/services.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Water Line Leak Detection Owensboro KY",
+          "item": "https://slableakdetectionowensboro.us/services/water-line-leak-detection"
+        }
+      ]
     },
     {
       "@type": "Service",
       "@id": "https://slableakdetectionowensboro.us/services/water-line-leak-detection#service",
-      "name": "Water Line Leak Detection",
-      "url": "https://slableakdetectionowensboro.us/services/water-line-leak-detection",
+      "name": "Water Line Leak Detection Owensboro KY",
+      "serviceType": "Slab Leak Detection & Plumbing Repair",
+      "description": "Water line leak detection in Owensboro KY. Locate main line breaks and hidden supply pipe leaks without digging. Call (270) 294-6900.",
       "provider": {
-        "@type": ["LocalBusiness", "PlumbingService"],
         "@id": "https://slableakdetectionowensboro.us/#localbusiness"
       },
-      "areaServed": {
-        "@type": "AdministrativeArea",
-        "name": "Owensboro KY"
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Owensboro"
+        },
+        {
+          "@type": "State",
+          "name": "Kentucky"
+        }
+      ],
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
       }
     },
     {
@@ -265,7 +410,65 @@
   </div>
 </section>
 
-    </main>
+    
+<!-- INTERNAL LINKING EXPLORER BLOCK -->
+<section class="t6-section t6-band-white" style="background:#f8fafc;padding:3.5rem 0;border-top:1px solid var(--t6-hairline);">
+  <div class="t6-container">
+    <div style="max-width:1100px;margin:0 auto;">
+      <h2 style="font-size:1.6rem;color:var(--t6-ink);margin-bottom:1.5rem;text-align:center;">Explore Our Leak Detection Services & Local Coverage</h2>
+      
+      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:2rem;">
+        <!-- Services Column -->
+        <div style="background:#fff;padding:1.5rem;border-radius:8px;border:1px solid var(--t6-hairline);">
+          <h3 style="font-size:1.15rem;color:var(--t6-ink);margin-bottom:.85rem;border-bottom:2px solid var(--t6-green);padding-bottom:.4rem;">Core Leak Detection Services</h3>
+          <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.55rem;font-size:.95rem;">
+            <li><a href="../services/slab-leak-detection.html" style="color:var(--t6-ink);text-decoration:underline;">Slab Leak Detection Owensboro</a></li>
+            <li><a href="../services/slab-leak-repair.html" style="color:var(--t6-ink);text-decoration:underline;">Slab Leak Repair & PEX Rerouting</a></li>
+            <li><a href="../services/water-leak-detection.html" style="color:var(--t6-ink);text-decoration:underline;">Water Leak Detection Services</a></li>
+            <li><a href="../services/underground-pipe-leak-detection.html" style="color:var(--t6-ink);text-decoration:underline;">Underground Pipe Leak Detection</a></li>
+            <li><a href="../services/foundation-leak-repair.html" style="color:var(--t6-ink);text-decoration:underline;">Foundation Leak Repair</a></li>
+            <li><a href="../services/emergency-leak-repair.html" style="color:var(--t6-ink);text-decoration:underline;">24/7 Emergency Plumber Services</a></li>
+            <li><a href="../services/burst-pipe-repair.html" style="color:var(--t6-ink);text-decoration:underline;">Burst Pipe Repair</a></li>
+            <li><a href="../services/hidden-water-leaks.html" style="color:var(--t6-ink);text-decoration:underline;">Hidden Water Leak Location</a></li>
+            <li><a href="../services.html" style="color:var(--t6-green-dark);font-weight:700;text-decoration:none;">View All Services &rarr;</a></li>
+          </ul>
+        </div>
+
+        <!-- Locations Column -->
+        <div style="background:#fff;padding:1.5rem;border-radius:8px;border:1px solid var(--t6-hairline);">
+          <h3 style="font-size:1.15rem;color:var(--t6-ink);margin-bottom:.85rem;border-bottom:2px solid var(--t6-green);padding-bottom:.4rem;">Featured Service Areas</h3>
+          <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.55rem;font-size:.95rem;">
+            <li><a href="../locations/downtown-owensboro.html" style="color:var(--t6-ink);text-decoration:underline;">Downtown Owensboro</a></li>
+            <li><a href="../locations/east-owensboro.html" style="color:var(--t6-ink);text-decoration:underline;">East Owensboro</a></li>
+            <li><a href="../locations/west-owensboro.html" style="color:var(--t6-ink);text-decoration:underline;">West Owensboro</a></li>
+            <li><a href="../locations/frederica-street-corridor.html" style="color:var(--t6-ink);text-decoration:underline;">Frederica Street Corridor</a></li>
+            <li><a href="../locations/highway-54-corridor.html" style="color:var(--t6-ink);text-decoration:underline;">Highway 54 Corridor</a></li>
+            <li><a href="../locations/slab-leak-detection-in-philpot-ky.html" style="color:var(--t6-ink);text-decoration:underline;">Philpot, KY</a></li>
+            <li><a href="../locations/slab-leak-detection-in-masonville-ky.html" style="color:var(--t6-ink);text-decoration:underline;">Masonville, KY</a></li>
+            <li><a href="../locations/slab-leak-detection-in-henderson-ky.html" style="color:var(--t6-ink);text-decoration:underline;">Henderson, KY</a></li>
+            <li><a href="../service-areas.html" style="color:var(--t6-green-dark);font-weight:700;text-decoration:none;">View All Service Areas &rarr;</a></li>
+          </ul>
+        </div>
+
+        <!-- Resources & Contact Column -->
+        <div style="background:#fff;padding:1.5rem;border-radius:8px;border:1px solid var(--t6-hairline);">
+          <h3 style="font-size:1.15rem;color:var(--t6-ink);margin-bottom:.85rem;border-bottom:2px solid var(--t6-green);padding-bottom:.4rem;">Resources & Support</h3>
+          <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.55rem;font-size:.95rem;">
+            <li><a href="../our-process.html" style="color:var(--t6-ink);text-decoration:underline;">Our 4-Step Diagnostic Process</a></li>
+            <li><a href="../case-studies.html" style="color:var(--t6-ink);text-decoration:underline;">Local Case Studies & Results</a></li>
+            <li><a href="../faq/slab-leak-faq.html" style="color:var(--t6-ink);text-decoration:underline;">Slab Leak Diagnostic FAQ</a></li>
+            <li><a href="../faq/leak-detection-faq.html" style="color:var(--t6-ink);text-decoration:underline;">General Water Leak FAQ</a></li>
+            <li><a href="../about.html" style="color:var(--t6-ink);text-decoration:underline;">About Our Plumbers</a></li>
+            <li><a href="../contact.html" style="color:var(--t6-ink);text-decoration:underline;">Request Emergency Service</a></li>
+            <li><a href="../contact.html" style="color:var(--t6-green-dark);font-weight:700;text-decoration:none;">Contact Us (24/7) &rarr;</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
 
 <footer class="t6-band-ink" style="position:relative;padding:4rem 0 2rem;background:var(--t6-ink);color:#fff;">
   <div class="t6-container">

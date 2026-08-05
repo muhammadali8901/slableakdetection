@@ -66,6 +66,31 @@
                           "source":  "/testimonials",
                           "destination":  "/",
                           "permanent":  true
+                      },
+                      {
+                          "source": "/water-leak-detection-owensboro-ky.html",
+                          "destination": "/water-leak-detection-owensboro-ky",
+                          "permanent": true
+                      },
+                      {
+                          "source": "/underground-leak-detection-owensboro-ky.html",
+                          "destination": "/underground-leak-detection-owensboro-ky",
+                          "permanent": true
+                      },
+                      {
+                          "source": "/burst-pipe-repair-owensboro-ky.html",
+                          "destination": "/burst-pipe-repair-owensboro-ky",
+                          "permanent": true
+                      },
+                      {
+                          "source": "/water-line-repair-owensboro-ky.html",
+                          "destination": "/water-line-repair-owensboro-ky",
+                          "permanent": true
+                      },
+                      {
+                          "source": "/foundation-leak-repair-owensboro-ky.html",
+                          "destination": "/foundation-leak-repair-owensboro-ky",
+                          "permanent": true
                       }
                   ]
 }

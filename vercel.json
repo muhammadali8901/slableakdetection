@@ -1,96 +1,96 @@
 {
-    "cleanUrls":  true,
-    "trailingSlash":  false,
-    "redirects":  [
-                      {
-                          "source":  "/index.html",
-                          "destination":  "/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/about.html",
-                          "destination":  "/about",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/contact.html",
-                          "destination":  "/contact",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/services.html",
-                          "destination":  "/services",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/locations.html",
-                          "destination":  "/service-areas",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/locations",
-                          "destination":  "/service-areas",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/privacy-policy.html",
-                          "destination":  "/privacy-policy",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog.html",
-                          "destination":  "/case-studies",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog",
-                          "destination":  "/case-studies",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/reviews.html",
-                          "destination":  "/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/reviews",
-                          "destination":  "/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/testimonials.html",
-                          "destination":  "/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/testimonials",
-                          "destination":  "/",
-                          "permanent":  true
-                      },
-                      {
-                          "source": "/water-leak-detection-owensboro-ky.html",
-                          "destination": "/water-leak-detection-owensboro-ky",
-                          "permanent": true
-                      },
-                      {
-                          "source": "/underground-leak-detection-owensboro-ky.html",
-                          "destination": "/underground-leak-detection-owensboro-ky",
-                          "permanent": true
-                      },
-                      {
-                          "source": "/burst-pipe-repair-owensboro-ky.html",
-                          "destination": "/burst-pipe-repair-owensboro-ky",
-                          "permanent": true
-                      },
-                      {
-                          "source": "/water-line-repair-owensboro-ky.html",
-                          "destination": "/water-line-repair-owensboro-ky",
-                          "permanent": true
-                      },
-                      {
-                          "source": "/foundation-leak-repair-owensboro-ky.html",
-                          "destination": "/foundation-leak-repair-owensboro-ky",
-                          "permanent": true
-                      }
-                  ]
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/about.html",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/contact.html",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/services.html",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/locations.html",
+      "destination": "/service-areas",
+      "permanent": true
+    },
+    {
+      "source": "/locations",
+      "destination": "/service-areas",
+      "permanent": true
+    },
+    {
+      "source": "/privacy-policy.html",
+      "destination": "/privacy-policy",
+      "permanent": true
+    },
+    {
+      "source": "/blog.html",
+      "destination": "/case-studies",
+      "permanent": true
+    },
+    {
+      "source": "/blog",
+      "destination": "/case-studies",
+      "permanent": true
+    },
+    {
+      "source": "/reviews.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/reviews",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/testimonials.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/testimonials",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/burst-pipe-repair-owensboro-ky.html",
+      "destination": "/services/burst-pipe-repair",
+      "permanent": true
+    },
+    {
+      "source": "/foundation-leak-repair-owensboro-ky.html",
+      "destination": "/services/foundation-leak-repair",
+      "permanent": true
+    },
+    {
+      "source": "/underground-leak-detection-owensboro-ky.html",
+      "destination": "/services/underground-pipe-leak-detection",
+      "permanent": true
+    },
+    {
+      "source": "/water-leak-detection-owensboro-ky.html",
+      "destination": "/services/water-leak-detection",
+      "permanent": true
+    },
+    {
+      "source": "/water-line-repair-owensboro-ky.html",
+      "destination": "/services/water-line-repair",
+      "permanent": true
+    }
+  ]
 }

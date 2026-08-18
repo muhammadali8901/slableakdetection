@@ -9,12 +9,13 @@
 /blog.html /case-studies 301!
 
 # 5 Supporting Pages Clean URLs
-/water-leak-detection-owensboro-ky.html /water-leak-detection-owensboro-ky 301!
-/underground-leak-detection-owensboro-ky.html /underground-leak-detection-owensboro-ky 301!
-/burst-pipe-repair-owensboro-ky.html /burst-pipe-repair-owensboro-ky 301!
-/water-line-repair-owensboro-ky.html /water-line-repair-owensboro-ky 301!
-/foundation-leak-repair-owensboro-ky.html /foundation-leak-repair-owensboro-ky 301!
 
+# Consolidated duplicate legacy service URLs
+/burst-pipe-repair-owensboro-ky.html /services/burst-pipe-repair 301!
+/foundation-leak-repair-owensboro-ky.html /services/foundation-leak-repair 301!
+/underground-leak-detection-owensboro-ky.html /services/underground-pipe-leak-detection 301!
+/water-leak-detection-owensboro-ky.html /services/water-leak-detection 301!
+/water-line-repair-owensboro-ky.html /services/water-line-repair 301!
 # Redirects for deleted reviews, testimonials, and blog
 /blog /case-studies 301!
 /reviews.html / 301!

@@ -69,7 +69,7 @@
     </nav>
 
     <div style="display:flex;align-items:center;gap:.85rem;">
-      <a class="t6-btn t6-btn-primary" href="tel:+12702946900">Call (270) 294-6900</a>
+      <a class="t6-btn t6-btn-primary" href="tel:+12702946900">Call for availability</a>
       <button id="t6NavToggle" aria-label="Open menu" aria-expanded="false" aria-controls="t6Drawer" class="t6-nav-toggle" style="background:transparent;border:1px solid var(--t6-hairline);color:var(--t6-ink);width:42px;height:42px;border-radius:8px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
       </button>
@@ -87,7 +87,7 @@
         <li><a href="${base}case-studies.html" style="color:#fff;text-decoration:none;display:block;padding:.55rem 0;border-bottom:1px solid rgba(255,255,255,.08);">Case Studies</a></li>
         <li><a href="${base}contact.html" style="color:#fff;text-decoration:none;display:block;padding:.55rem 0;border-bottom:1px solid rgba(255,255,255,.08);">Contact</a></li>
       </ul>
-      <a itemprop="telephone" href="tel:+12702946900" class="t6-btn t6-btn-primary" style="margin-top:1.5rem;width:100%;">Call (270) 294-6900</a>
+      <a itemprop="telephone" href="tel:+12702946900" class="t6-btn t6-btn-primary" style="margin-top:1.5rem;width:100%;">Call for availability</a>
     </div>
   </div>
   <style>
@@ -176,7 +176,7 @@
           <span style="font-family:var(--font-display);font-weight:700;font-size:1.3rem;color:#fff;letter-spacing:-.01em;">Owensboro Leak Detection Experts</span>
         </div>
         <hr class="t6-hr-green" style="margin:0 0 1rem;" />
-        <p style="color:rgba(255,255,255,.78);max-width:340px;font-size:.95rem;line-height:1.7;">Licensed, insured slab leak detection pros serving local homes and businesses with same-day response and a real workmanship warranty.</p>
+        <p style="color:rgba(255,255,255,.78);max-width:340px;font-size:.95rem;line-height:1.7;">Leak detection and repair planning for homes and properties in Owensboro, Daviess County, and nearby communities.</p>
       </div>
 
       <div>
@@ -184,8 +184,8 @@
         <hr class="t6-hr-green" style="margin:0 0 1rem;" />
         <div style="color:rgba(255,255,255,.85);font-size:.92rem;line-height:1.7;">
           <p style="margin:0 0 .4rem;"><a itemprop="telephone" href="tel:+12702946900" style="color:#fff;text-decoration:none;font-weight:600;">(270) 294-6900</a></p>
-          <p style="margin:0 0 .4rem;">4010 Airpark Dr, Owensboro, KY 42301</p>
-          <p style="margin:0;">Mon&ndash;Fri: 7AM &ndash; 7PM<br/>Sat: 8AM &ndash; 4PM<br/>24/7 Emergency</p>
+          <p style="margin:0 0 .4rem;">Serving Owensboro, Daviess County, and nearby communities</p>
+          <p style="margin:0;">Call to confirm current service availability</p>
         </div>
       </div>
 
@@ -215,7 +215,7 @@
     </div>
 
     <div style="margin-top:3rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.12);display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem;align-items:center;color:rgba(255,255,255,.6);font-size:.85rem;">
-      <p style="margin:0;">&copy; 2026 Owensboro Leak Detection Experts. Licensed &amp; insured. KY Master Plumber Lic #M5108. All rights reserved. | Designed &amp; Developed by <a href="https://imrandigitals.online/" target="_blank" rel="noopener" style="color:rgba(255,255,255,.8);text-decoration:underline;">Imran Digitals</a></p>
+      <p style="margin:0;">&copy; 2026 Owensboro Leak Detection Experts. Service details and credentials available on request. All rights reserved. | Designed &amp; Developed by <a href="https://imrandigitals.online/" target="_blank" rel="noopener" style="color:rgba(255,255,255,.8);text-decoration:underline;">Imran Digitals</a></p>
       <p style="margin:0;display:flex;gap:1rem;align-items:center;">
         <span style="display:inline-flex;gap:6px;align-items:center;">
           <span style="font-family:var(--font-display);font-weight:700;color:var(--t6-green);">VISA</span>
@@ -239,13 +239,13 @@
 <div class="t6-mobile-cta" role="region" aria-label="Mobile call to action">
   <a itemprop="telephone" href="tel:+12702946900" class="t6-mobile-cta__call" style="background:var(--t6-green);color:var(--t6-ink);font-weight:800;font-size:1.1rem;width:100%;display:flex;justify-content:center;align-items:center;min-height:60px;">
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-right:8px;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0.7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-    Call Now: (270) 294-6900
+    Call for availability: (270) 294-6900
   </a>
 </div>
 <div class="t6-rail" role="region" aria-label="Quick contact rail">
   <a itemprop="telephone" href="tel:+12702946900">
     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0.7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-    Call Now
+    Call for availability
   </a>
 </div>`;
   }
